@@ -24,15 +24,4 @@ class GuessingGame {
     }
 }
 
-let a = new GuessingGame();
-let n = 12345;
-let result = null;
-a.setRange(0, 200000);
-while(result !== n) {
-  result = a.guess();
-  console.log(result);
-  if (result > n) a.lower();
-  if (result < n) a.greater();
-}
-
 module.exports = GuessingGame;
